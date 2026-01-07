@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>BANG & OLUFSEN</title>
+    <link rel="icon" href="./src/images/favicon/favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -98,7 +99,7 @@
               <article class="product recommended__product">
                 <img src="./src/images/recommended/beosound-as-2x.png"
           alt="beosound-as-recommended"
-          class="product_photo">
+          class="product__photo">
                 <h3 class="product__title">BEOSOUND A5</h3>
                 <p class="product__category">
             Huge sound anywhere - in the home or outdoors. Beosound A5 is a Wi-Fi and Bluetooth speaker with long-lasting battery and wireless charging built in.
@@ -109,7 +110,7 @@
               <article class="product recommended__product">
                 <img src="./src/images/recommended/beoplay-hx-2x.png"
                   alt="beoplay-hx-recommended"
-                  class="product_photo">
+                  class="product__photo">
                 <h3 class="product__title">BEOPLAY HX</h3>
                 <p class="product__category">
             Wireless noise-cancelling headphones. Listen in comfort whether you're on a call, working from home or taking a moment for yourself.
@@ -120,7 +121,7 @@
               <article class="product recommended__product">
                 <img src="./src/images/recommended/beosound theatre-2x.png"
                 alt="beosound-theatre-recommended"
-                class="product_photo">
+                class="product__photo">
                 <h3 class="product__title">BEOSOUND THEATRE</h3>
                 <p class="product__category">
             Four patent-pending acoustic innovations in one sleek soundbar envelop you in sound from every angle. Made to fit any TV, and last for generations.
@@ -221,40 +222,39 @@ Bang & Olufsen is expanding its Recreated Classics Program with the launch of Be
 
     <footer class="contact-us" id="contact-us">
       <div class="container">
-      <h2 class="
+        <h2 class="
       contact-us__title
       section-title
       section-title--align--left"
       >
       Contact us
-      </h2>
-
-      <div class="contact-us__content">
-        <div class="contact-us__form-field">
-          <form class="contact-us__form">
+        </h2>
+        <div class="contact-us__content">
+          <form class="contact-us__form" onsubmit="this.reset();
+          return false;"
+          action="post">
             <input
             name="form-field"
             type="text"
             placeholder= "Name"
+            minlength="3" maxlength="15"
             class="contact-us__input"
             required
-            />
-          </form>
+            title="Name must be 3-15 characters in length"
+            >
 
-          <form class="contact-us__form">
             <input
             name="form-field"
             type="email"
             placeholder= "Email"
             class="contact-us__input"
             required
-            />
-          </form>
+            >
 
-          <form class="contact-us__form">
             <textarea
             name="form-field"
             placeholder= "Message"
+            rows="5" maxlength="150"
             class="contact-us__input--last" required></textarea>
 
             <button
@@ -263,44 +263,42 @@ Bang & Olufsen is expanding its Recreated Classics Program with the launch of Be
             Send
             </button>
           </form>
-        </div>
 
-        <div class="contact-us__info">
-          <div class="contact-us__data">
-            <p class="contact-us__text contact-us__text--left">
+          <div class="contact-us__info">
+            <div class="contact-us__data">
+              <p class="contact-us__text contact-us__text--left">
         Phone
-            </p>
-            <a href="tel:+1 234 5555-55-55"
+              </p>
+              <a href="tel:+1 234 5555-55-55"
       class="contact-us__link">
       +1 234 5555-55-55
-            </a>
-          </div>
+              </a>
+            </div>
 
-          <div class="contact-us__data">
-            <p class="contact-us__text contact-us__text--left">
+            <div class="contact-us__data">
+              <p class="contact-us__text contact-us__text--left">
           Email
-            </p>
-            <a href="hello@bang&olufsen.com"
+              </p>
+              <a href="hello@bang&olufsen.com"
         class="contact-us__link">
         hello@bang&olufsen.com
-            </a>
-          </div>
+              </a>
+            </div>
 
-          <div>
-            <p class="contact-us__text contact-us__text--left">
+            <div>
+              <p class="contact-us__text contact-us__text--left">
                 Address
-            </p>
-            <p class="contact-us__link">
-          400 first ave.
-              <br>
-          suite 700
-              <br>
-          Minneapolis, MN 55401
-            </p>
+              </p>
+              <a href="https://www.mapquest.com/us/minnesota/assembly-279725620"
+              class="contact-us__link" target="_blank">
+              400 first ave.<br>
+            suite 700<br>Minneapolis, MN 55401
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      </div>
     </footer>
+        </div>
   </body>
 </html>
