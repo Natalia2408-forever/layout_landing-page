@@ -2,15 +2,26 @@
   margin: 0;
   &__photo {
     width: 100%;
-    object-fit: cover;
+    overflow: hidden;
     justify-self: center;
   }
 
   &__logo {
     display: block;
     width: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+    object-position: center;
 
     @include hover(transform, scale(1.1));
+
+    @include on-tablet {
+      height: 400px;
+    }
+
+    @include on-desktop {
+      height: 460px;
+      }
   }
 
   &__content {
