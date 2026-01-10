@@ -68,7 +68,7 @@
     }
 
     &:focus {
-      outline: 2px solid #f98921;
+      outline: 2px solid $default-colour-button;
     }
 
     &:hover {
@@ -92,7 +92,7 @@
       }
 
       &:focus {
-        outline: 2px solid #f98921;
+        outline: 2px solid $default-colour-button;
       }
 
       &:hover {
@@ -144,12 +144,33 @@
   }
 
   &__link {
+    position: relative;
     color: $main-text-color;
     text-decoration: none;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     letter-spacing: 0.15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1.5px;
+      background-color: $default-colour-button;
+      transform: scaleX(0);
+      transition: transform $effectDuration ease-in-out;
+    }
+
+    &:hover {
+      color: $default-colour-button;
+
+      &::after {
+        transform: scaleX(1.04);
+      }
+    }
   }
 
   &__button {

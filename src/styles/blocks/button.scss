@@ -7,7 +7,7 @@
   border: none;
   align-items: center;
   border-radius: 8px;
-  background-color: #f98921;
+  background-color: $default-colour-button;
   transition: background-color $effectDuration ease-in-out;
   font-size: 16px;
   font-weight: 700;
@@ -21,6 +21,6 @@
   }
 
   &:active {
-    background-color: #010810;
+    background-color: $active-colour-button;
   }
 }
